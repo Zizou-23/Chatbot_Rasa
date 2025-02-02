@@ -51,7 +51,7 @@ Python 3.10 et pip installés.
 Ouvre un terminal (cmd, PowerShell ou Terminal sur Mac/Linux) et exécute la commande suivante :
 
 # Cloner le projet depuis GitHub
-git clone https://github.com/nom-utilisateur/nom-du-projet.git
+git clone https://github.com/Zizou-23/Chatbot_Rasa.git
 
 # Se déplacer dans le dossier du projet
 cd nom-du-projet
@@ -63,7 +63,7 @@ Configuration des variables d’environnement si nécessaire
  Installation des dépendances
 Avant de lancer le projet, installe les bibliothèques nécessaires avec la commande :
 
-pip install -r requirements
+pip install -r requirements.txt
  Lancer le chatbot
 Démarrer le serveur Rasa
 rasa run
