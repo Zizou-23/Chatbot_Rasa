@@ -1,0 +1,122 @@
+version: "3.1"
+nlu:
+  - intent: greet
+    examples: |
+      - Salut
+      - Bonjour
+      - Coucou
+      - Hey
+      - Salut, ça va ?
+
+  - intent: goodbye
+    examples: |
+      - Au revoir
+      - À bientôt
+      - Bye
+      - Ciao
+      - À plus tard
+
+  - intent: affirm
+    examples: |
+      - Oui
+      - Bien sûr
+      - Tout à fait
+      - Absolument
+      - Ok
+
+  - intent: deny
+    examples: |
+      - Non
+      - Pas vraiment
+      - Pas du tout
+      - Je ne crois pas
+      - Pas sûr
+
+  - intent: bot_challenge
+    examples: |
+      - Es-tu un robot ?
+      - Es-tu humain ?
+      - Qui es-tu ?
+      - Tu es réel ?
+
+  - intent: ask_weather
+    examples: |
+      - Quel temps fait-il ?
+      - Il va pleuvoir aujourd'hui ?
+      - Donne-moi la météo
+      - Est-ce qu'il fait beau ?
+      - Quel temps fait-il à [Paris](location) ?
+      - Météo à [Lyon](location) s'il te plaît
+
+  - intent: ask_time
+    examples: |
+      - Quelle heure est-il ?
+      - Donne-moi l'heure
+      - Peux-tu me dire l'heure ?
+      - C'est quelle heure maintenant ?
+      - Quand passe le prochain bus ?
+      - Quel est l'horaire du bus ?
+
+  - intent: ask_pizza
+    examples: |
+      - Je veux commander une pizza
+      - J'aimerais une pizza
+      - Commande-moi une pizza
+      - Je souhaite une margherita
+      - Pizza taille moyenne, s'il te plaît
+
+  - intent: ask_drink
+    examples: |
+      - Je veux ajouter une boisson
+      - Une boisson avec ma commande
+      - Pas de boisson, merci
+
+  - intent: ask_help
+    examples: |
+      - J'ai besoin d'aide
+      - Aide-moi
+      - Que peux-tu faire pour moi ?
+      - Quels sont tes services ?
+
+  - intent: ask_joke
+    examples: |
+      - Raconte-moi une blague
+      - Dis-moi une blague
+      - Fais-moi rire
+      - As-tu une blague ?
+
+  - intent: provide_location
+    examples: |
+      - À [Paris](location)
+      - Je suis à [Lyon](location)
+      - À [Marseille](location)
+      - Ici à [Bordeaux](location)
+
+  - intent: provide_name
+    examples: |
+      - Je m'appelle [Jean](user_name)
+      - Mon nom est [Marie](user_name)
+      - [Paul](user_name), enchanté
+      - Moi c'est [Luc](user_name)
+
+  - intent: provide_pizza_size
+    examples: |
+      - Moyenne
+      - Grande
+      - Petite
+
+  - intent: ask_bus_schedule
+    examples: |
+      - Quand passe le prochain bus ?
+      - Quels sont les horaires du bus ?
+      - Prochain bus pour la ligne [5](bus_line)
+      - Donne-moi les horaires de la ligne [10](bus_line)
+
+  - intent: perform_calculation
+    examples: |
+      - Calcule 5 + 3
+      - Quel est le résultat de 10 * 2 ?
+      - Fais la somme de 15 et 20
+      - Divise 100 par 5
+      - Multiplie 7 par 8
+      - Soustrait 12 de 30

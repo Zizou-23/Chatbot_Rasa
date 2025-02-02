@@ -1,0 +1,66 @@
+version: "3.1"
+rules:
+  - rule: Dire bonjour
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Dire au revoir
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Poser une question sur le bot
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: Poser une question sur l'heure
+    steps:
+      - intent: ask_time
+      - action: utter_time
+
+  - rule: Demander une blague
+    steps:
+      - intent: ask_joke
+      - action: utter_joke
+
+  - rule: Demander de l'aide
+    steps:
+      - intent: ask_help
+      - action: utter_help
+
+  - rule: Commander une pizza
+    steps:
+      - intent: ask_pizza
+      - action: utter_order_pizza
+
+  - rule: Ajouter une boisson
+    steps:
+      - intent: ask_drink
+      - action: utter_add_drink
+
+  - rule: Donner son nom
+    steps:
+      - intent: provide_name
+      - action: utter_greet_user
+
+  - rule: Poser une question sur les horaires de bus
+    steps:
+      - intent: ask_bus_schedule
+      - action: utter_bus_schedule
+
+  - rule: Demander la météo
+    steps:
+      - intent: ask_weather
+      - action: utter_weather
+
+  - rule: Effectuer un calcul
+    steps:
+      - intent: perform_calculation
+      - action: action_perform_calculation
+
+  - rule: Default fallback rule
+    steps:
+      - intent: nlu_fallback
+      - action: utter_default

@@ -1,0 +1,118 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - ask_weather
+  - ask_time
+  - ask_joke
+  - ask_about_bot
+  - ask_help
+  - provide_name
+  - provide_info
+  - ask_pizza
+  - ask_drink
+  - provide_location
+  - provide_pizza_size
+  - ask_bus_schedule
+  - perform_calculation
+  - nlu_fallback
+
+responses:
+  utter_greet:
+    - text: "Bonjour ! Comment puis-je vous aider ?"
+    - text: "Salut ! Que puis-je faire pour vous aujourd'hui ?"
+
+  utter_goodbye:
+    - text: "Au revoir ! À bientôt."
+    - text: "Bonne journée ! À plus tard."
+
+  utter_iamabot:
+    - text: "Je suis un assistant virtuel créé pour vous aider."
+    - text: "Je suis un bot, mais je suis là pour répondre à vos questions."
+
+  utter_weather:
+    - text: "Je ne peux pas encore consulter la météo exacte, mais je peux vous dire qu'il fait souvent beau à {location} !"
+
+  utter_time:
+    - text: "Actuellement, je ne peux pas donner l'heure exacte. Vérifiez votre téléphone pour une information précise !"
+    - text: "Le prochain bus de la ligne {bus_line} passe dans environ 10 minutes."
+
+  utter_joke:
+    - text: "Pourquoi les plongeurs plongent-ils toujours en arrière et jamais en avant ? Parce que sinon ils tombent du bateau !"
+    - text: "Quel est le comble pour un électricien ? De ne pas être au courant !"
+
+  utter_about_bot:
+    - text: "Je suis un chatbot capable de discuter, de raconter des blagues et de vous donner des informations utiles."
+    - text: "Je suis un assistant virtuel programmé pour interagir avec vous."
+
+  utter_help:
+    - text: "Je peux répondre à vos questions, discuter ou même raconter des blagues !"
+    - text: "Je suis là pour discuter ou vous aider selon vos besoins."
+
+  utter_order_pizza:
+    - text: "Quelle taille de pizza souhaitez-vous ? (petite, moyenne, grande)"
+    - text: "D'accord, je vais passer votre commande de pizza. Vous voulez une boisson avec cela ?"
+
+  utter_add_drink:
+    - text: "Quelle boisson souhaitez-vous ajouter ?"
+    - text: "Très bien, pas de boisson pour cette commande."
+
+  utter_greet_user:
+    - text: "Enchanté de vous rencontrer, {user_name} ! Que puis-je faire pour vous ?"
+
+  utter_thank_you:
+    - text: "Merci, {user_name}, pour ces informations. Vous avez {user_age} ans. Comment puis-je vous aider ensuite ?"
+
+  utter_bus_schedule:
+    - text: "Le prochain bus de la ligne {bus_line} arrive à {time}."
+    - text: "Les horaires pour la ligne {bus_line} sont : 8h, 12h, 16h et 20h."
+
+  utter_default:
+    - text: "Désolé, mais mon niveau de connaissance ne me permet pas de satisfaire votre demande."
+
+forms:
+  user_info_form:
+    required_slots:
+      - user_name
+      - user_age
+
+slots:
+  user_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+
+  user_age:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+
+  location:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: location
+
+  bus_line:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: bus_line
+
+  pizza_size:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: pizza_size
+
+actions:
+  - action_perform_calculation
