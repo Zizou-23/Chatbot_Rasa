@@ -1,4 +1,4 @@
-README.md — Structure recommandée
+README.md 
 1. COMCEPTION d'un ChatBot Simple
 Notre projet se nomme "ChatBot_Rasa"
 	Description expliquant l’objectif du projet
